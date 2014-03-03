@@ -1,0 +1,767 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+<style>
+p.ex1 {margin:1cm 1cm 1cm 1cm}
+</style>
+		<title>SUBICADS ADVERTISING</title>
+<script>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		
+</script>		
+		 <meta charset="utf-8" />
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/1.css"/>
+<link rel="stylesheet" href="theme/yyu.css"/>
+<script src="js/jqueryJs1.js"></script>
+<script src="js/jqueryJs2.js"></script>
+
+<script>
+	$(function(){
+    $('.fadein img:gt(0)').hide();
+    setInterval(function(){
+      $('.fadein :first-child').fadeOut()
+         .next('img').fadeIn()
+         .end().appendTo('.fadein');}, 
+      3000);
+});
+$(document).on( "mobileinit", function() {
+			$.mobile.defaultPageTransition = "slide";
+		});
+		
+	
+</script>
+<script type="text/javascript">
+function commaSeparateNumber(val){
+			while (/(\d+)(\d{3})/.test(val.toString())){
+			val = val.toString().replace(/(\d+)(\d{3})/, '$1'+','+'$2');
+			}
+			return val;
+			}
+function displayPrice(additional){
+	document.getElementById('plus').value=additional
+
+}
+function totalTarp(){
+	var a = document.getElementById('widthTarp').value;
+	var b = document.getElementById('heightTarp').value;
+	var c = document.getElementById('plus').value;
+	var width=parseInt(a);
+	var height=parseInt(b);
+	
+	
+	if (c=="₱150.00") 
+		{
+			var test = (((width*height)*20)+150);
+			var total2 = parseInt(test);
+			$('#totalTarp').val("₱"+commaSeparateNumber(total2)+".00");
+		}
+	else
+		{
+		var test = (((width*height)*20));
+		var total2 = parseInt(test);
+		$('#totalTarp').val("₱"+commaSeparateNumber(total2)+".00");
+		}
+
+}
+function clearTarp(){
+	document.getElementById('widthTarp').value="";
+	document.getElementById('heightTarp').value="";
+	document.getElementById('totalTarp').value="";
+	
+
+}
+function testing(){
+	$.mobile.loading( 'show', {
+			theme: 'c'
+		});
+
+}
+function ajax(){
+			$.mobile.loading( 'show', {
+			theme: 'c'
+		});
+			var idjo = document.getElementById('jonumber').value;
+			var surl =  "http://gcccs.org/subicads/ajax.php?callback=?"; 
+			$.getJSON(surl,{id:idjo},  function(data) { 
+			$.each(data, function(key,val) {
+			document.getElementById('status').value=val.status;
+			document.getElementById('designer').value=val.designer;
+			document.getElementById('type').value=val.type;
+			$.mobile.loading('hide');
+	  }); 
+});
+}
+
+</script>
+<style>
+
+.fadein { position:relative; width:100%; height:500px; }
+	.fadein img { position:absolute; left:0; top:0; }
+.bg-1st{
+				background-image:url('img/mainbg.png');
+				background-size:100% 100%;
+				-webkit-background-origin:border;
+				background-repeat:no-repeat;
+				background-attachment:fixed;
+}
+
+.bg 	{
+
+				background-image:url('img/mainbg.png');
+				background-size:100% 100%;
+				-webkit-background-origin;border;
+				background-repeat:no-repeat;
+				background-attachment:fixed;
+}
+.bg-status 	{
+
+				background-image:url('maintenance.png');
+				background-size:100% 100%;
+				-webkit-background-origin;border;
+				background-repeat:no-repeat;
+				background-attachment:fixed;
+}
+
+.bg2 	{
+
+				
+				background-size:100% 100%;
+				-webkit-background-origin;border;
+				background-repeat:no-repeat;
+				background-attachment:fixed;
+}
+
+	div#border {
+	background-color: silver;
+	width: 98%;
+	height: 50%;
+	border-radius: 20px;
+	padding: 7px;
+	
+	}
+	
+	div#border2 {
+	background-color: red;
+	width: 98%;
+	height: 50%;
+	border-radius: 20px;
+	padding: 7px;
+	
+	}
+.home 	{
+
+				background-color:black;
+				background-size:100% 100%;
+				-webkit-background-origin;border;
+				background-repeat:no-repeat;
+				background-attachment:fixed;
+}
+
+</style>
+
+</head>
+<body>
+<div data-role="page" id="front" class="home">
+	
+	<div data-role="content">
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<img src="img/pakyu.png"  width="100%" height="50%" alt="" />
+	</div>
+	<div data-role="footer" data-position="fixed" >
+	<div data-role="navbar">
+		<ul>
+			<li ><a href="#1st" data-theme="c"><h1 style="font-size:99%"><b>ENTER</b></h1></a></li>
+			
+		</ul>
+	</div>
+	</div>
+</div>
+<!--1st page-->
+	<div data-role="page" id="1st" data-theme="a">
+		<div data-role="header" data-theme="a">
+<a href="#mypanel" data-icon="home" data-iconpos="notext" data-theme="c" data-inline="true" data-role="button">left</a>
+	<h1><font style="font-size:99%">SUBICADS ADVERTISING</font></h1>
+
+</div>
+		<div data-role="content" >
+		
+			<div class="fadein" align="center">
+			<center>
+			<img src="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-ash3/1425614_722461737773559_112592410_n.jpg" style="width:100%; height:500px;">
+			<img src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-frc3/p206x206/1461808_722458721107194_2034620254_n.jpg" style="width:100%; height:500px;">
+			<img src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-prn2/1468543_722458581107208_36024381_n.jpg" style="width:100%; height:500px;">
+			<img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-prn2/p206x206/1471354_722462531106813_460734753_n.jpg" style="width:100%; height:500px;">
+			<img src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-ash3/p206x206/1477394_722460624440337_655622236_n.jpg" style="width:100%; height:500px;">
+			</center>
+		<br>
+		
+	</div>
+	<img src="img/a.png" style="height:500px;width:100%;">
+		</div>
+		
+		<div data-role="panel" data-display="reveal" id="mypanel" data-theme="a" align="center">
+				<br><br><br><br>
+				<img src="img/d.png"  width="70%" height="40%" alt=""  /><br><br><br><br>
+				<!--
+			<ul  data-role="listview" data-inset="false"  data-theme="" >
+					<li data-role="list-divider"data-theme="a"  ><font style='Font-family:nusaliver;Font-size:20px; '>MENU</font></li>
+				<!--	<li  data-theme="a"><a href="tarpaulin.html" rel="external"><img src="img/product.png" class="ui-li-has-thumb"/><h1 style='Font-family:calibri;Font-size:20px; '>TARPAULIN</h1></a></li>
+					<li  data-theme="a"><a href="#track"><h1 style='Font-family:calibri;Font-size:20px; '>TRACK ORDER</h1></a></li>
+					<li  data-theme="a"><a href="#pricing"><h1 style='Font-family:calibri;Font-size:20px; '>TARPAULIN PRICING</h1></a></li>
+					<li  data-theme="a"><a href="#upload"><h1 style='Font-family:calibri;Font-size:20px; '>SEND LAYOUT</h1></a></li>
+					<li  data-theme="a"><a href="#contact"><h1 style='Font-family:calibri;Font-size:20px; '>CONTACT US</h1></a></li>
+					<li  data-theme="a"><a href="https://m.facebook.com/subicads" target=_"blank" title="Click to view page"><h1 style='Font-family:calibri;Font-size:20px; '>FACEBOOK</h1></a></li>
+					<li  data-theme="a"><a href="https://www.twitter.com/subicads" target=_"blank" title="Click to view page"><h1 style='Font-family:calibri;Font-size:20px; '>TWITTER</h1></a></li>
+					
+					<li  data-theme="a"><a href="#about"><h1 style='Font-family:calibri;Font-size:20px; '>ABOUT</h1></a></li>
+					
+				</ul>
+		-->
+					<ul data-role="listview" data-theme="a">
+					<li data-role="list-divider" data-theme="a">Menu</li>
+					<li id="o1-p" class="inBar"><a href="#agreement">User Agreement</a></li>
+					<li id="o1-p" class="inBar"><a href="#gallery">Gallery</a></li>
+					<li id="o1-p" class="inBar"><a href="#track">Track</a></li>
+					<li id="o2-p" class="inBar"><a href="#pricing">Tarpaulin Pricing</a></li>
+					<li id="o3-p" class="inBar"><a href="#upload">Send Layout</a></li>
+					<li data-role="list-divider" data-theme="a">Contact Us</li>
+					<li id="o8-p" class="inBar"><a href="tel:+63472239142">Talk and Text</a></li>
+					<li id="o8-p" class="inBar"><a href="tel:+639202005225">Smart</a></li>
+					<li id="o8-p" class="inBar"><a href="tel:+639228286514">Sun Cellular</a></li>
+					<li data-role="list-divider" data-theme="a">Email Us!</li>	
+					<li id="o6-p" class="inBar"><a href="mailto:subicadsled@hotmail.com">Hotmail</a></li>
+					<li id="o6-p" class="inBar"><a href="mailto:subicadsled@yahoo.com">Yahoo Mail</a></li>
+					<li data-role="list-divider" data-theme="a">Connect with us!</li>	
+					<li id="o9-p" class="inBar"><a href="https://m.facebook.com/subicads" target=_"blank" title="Click to view page">Facebook</a></li>
+					<li id="o9-p" class="inBar"><a href="https://www.twitter.com/subicads" target=_"blank" title="Click to view page">Twitter</a></li>
+					
+					</ul>
+				<br><br><br><br>
+				
+		</div>
+	
+	</div>
+	<!--	
+	<div data-role="page" id="main"  data-theme="a" >
+		
+		
+					
+		<div data-role="content">
+		
+			<ul data-role="listview" data-inset="true" >
+						
+					<li data-role="list-divider" data-theme="a">
+					<center>
+						<h1 data-theme="a" style='Font-family:nusaliver;Font-size:50px;'>LATEST LED VIDEO</h1>
+					</center>
+					</li>
+					<li data-role="fieldcontain">
+					<div align="center" class="">
+					<!--<iframe width="650" height="700" src="//www.youtube.com/embed/WMHidjDB_Uk" frameborder="0" allowfullscreen></iframe><br>
+					<iframe src="//www.youtube.com/embed/WMHidjDB_Uk" width="650" height="700" name="search_iframe" frameborder="0" allowfullscreen></iframe> -->
+				<!--	<iframe width="650" height="700" src="http://www.youtube.com/embed/7O1A2OgMNOw?feature=player_detailpage" name="search_iframe" frameborder="0" allowfullscreen></iframe>
+					</div>
+					</li>
+					</ul>
+					<hr>
+					<ul data-role="listview" data-inset="true">
+						<li data-role="list-divider" data-theme="a">
+						<h1>RECENT VIDEOS</h1>
+						</li>
+						<div align="center" class="list">
+						<a href="http://www.youtube.com/embed/7O1A2OgMNOw?feature=player_embedded" target="search_iframe"  ><img  src="img/ledvideos.png" alt="Paris, France" style="width:200px; height:200px;"></a>
+						<a href="http://www.youtube.com/embed/7O1A2OgMNOw?feature=player_embedded" target="search_iframe"  ><img  src="img/ledvideos.png" alt="Paris, France" style="width:200px; height:200px;"></a>
+						<a href="http://www.youtube.com/embed/7O1A2OgMNOw?feature=player_embedded" target="search_iframe"  ><img  src="img/ledvideos.png" alt="Paris, France" style="width:200px; height:200px;"></a>
+						
+						</div>
+					</ul>
+					
+					<div data-role="panel" id="mypanel" data-theme="a" data-display="reveal">
+					
+						<a href="" data-role="button" data-rel="close">Close Me</a>
+					</div>
+		
+	
+			<div data-role="panel" id="mypanel" data-theme="" data-display="push" class="bg" >
+					<ul  data-role="listview" data-inset="false"  data-theme="" >
+					<li data-role="list-divider"data-theme="a"  ><font style='Font-family:nusaliver;Font-size:20px; '>MENU</font></li>
+					<li  data-theme=""><a href="tarpaulin.html" rel="external"><img src="img/product.png" class="ui-li-has-thumb"/><h1 style='Font-family:nusaliver;Font-size:20px; '>TARPAULIN</h1></a></li>
+					<li  data-theme=""><a href="#reservation"><img src="img/icons/ic_done.png" class="ui-li-has-thumb"/><h1 style='Font-family:nusaliver;Font-size:20px; '>RESERVATIONS</h1></a></li>
+					<li  data-theme=""><a href="#status"><img src="img/monitoring.png" class="ui-li-has-thumb"/><h1 style='Font-family:nusaliver;Font-size:20px; '>ORDER STATUS</h1></a></li>
+					<li  data-theme=""><a href="#utility"><img src="img/icons/ic_help.png" class="ui-li-has-thumb"/><h1 style='Font-family:nusaliver;Font-size:20px; '>UTILITIES</h1></a></li>
+					<li  data-theme=""><a href="#pricing"><img src="img/icons/ic_help.png" class="ui-li-has-thumb"/><h1 style='Font-family:nusaliver;Font-size:20px; '>PRICING</h1></a></li>
+					<li  data-theme=""><a href="#about"><img src="img/icons/ic_help.png" class="ui-li-has-thumb"/><h1 style='Font-family:nusaliver;Font-size:20px; '>GUIDE</h1></a></li>
+					
+				</ul>
+			</div>
+	-->	
+				
+	</div>
+<!--ORDER STATUS-->
+
+	<div data-role="page"  class="bg-status" data-theme="">
+		<!--<div data-role="content">
+			
+						<ul data-role="listview" data-inset="true" data-theme="">
+                        <li data-role="fieldcontain" data-theme="a">
+                            <h1 style='Font-family:nusaliver;Font-size:25px;' >ORDER CATEGORY:</h1>
+                        </li>
+						<li data-role="fieldcontain">
+                            <input type="text" data-clear-btn="true" name="" id="" value="" style='Font-family:nusaliver;Font-size:25px;' >
+                        </li>		
+						<li data-role="fieldcontain" data-theme="a">
+                            <h1 style='Font-family:nusaliver;Font-size:25px;' >JOB ORDER NUMBER:</h1>
+                        </li>
+						<li data-role="fieldcontain">
+                            <input type="text" data-clear-btn="true" id="jonumber" name="jonumber" value="" style='Font-family:nusaliver;Font-size:25px; ' >
+                        </li>
+						<li data-role="fieldcontain">
+						<a href="#" onclick="getJO(jonumber.value)" data-role="button" ><h2 style="Font-family:nusaliver;">TRACK</h2></a>
+						</li>
+						</ul>
+						
+						
+						<div id="status" style= "margin-top: 500px; Font-family:nusaliver;Font-size:50px; color: white;" align="center"></div>
+		</div>
+		-->
+		 
+	</div>
+<!--PRICING-->
+<div data-role="page" id="pricing" class="bg-1st" data-theme="">
+		<div data-role="header" data-theme="a">
+
+	<h1><font style="font-size:99%">TARPAULIN PRICING</font></h1>
+
+</div>
+	<div data-role="content">
+				
+		
+					
+					<hr class="gradiant">
+					<div data-role="fieldcontain">
+					<font style=''>HEIGHT(ft):</font><br>
+					<input type="text" data-theme="a" data-clear-btn="true"  id="widthTarp" value="" >
+					</div>
+					<hr class="gradient">
+					<div data-role="fieldcontain">
+					<font style=''>WIDTH(ft):</font><br>
+					<input type="text" data-theme="a" data-clear-btn="true"  id="heightTarp" value="" >
+					</div>
+					<hr class="gradient">
+					<div data-role="fieldcontain">
+					<font style='' >ADDITIONAL:</font><br>
+					<input type="text"  id="plus" data-theme="a" disabled="disabled"/>
+					</div>
+					<div data-role-="fieldcontain">
+					<font style=';'>TOTAL PRICE:</font>
+					<input type="text" disabled="disabled" id="totalTarp"   data-theme="a"/>
+					</div>
+					<hr class="gradient">
+					<div data-role="fieldcontain">
+						
+					<label><input type="radio" data-theme="a" name="radio-choice-0" onclick="displayPrice(this.value)" id="layoutTarp" value="₱150.00" style=''><font  style='' align="center">W/ LAYOUT</font></label>	
+					<label><input type="radio" data-theme="a" name="radio-choice-0" onclick="displayPrice(this.value)" id="layoutTarp" value="₱0.00"><font  style='' align="center">W/O LAYOUT</font></label>
+					</div>
+					<hr class="gradient">
+					<li data-role="fieldcontain">
+						<a href="#" data-role="button" onclick="totalTarp()"><font style=''>COMPUTE</font></a>
+					</li>
+					
+			
+	</div>
+</div>	
+<div data-role="page" id="upload" data-theme="">
+		<div data-role="header">
+		<div align="center">
+		<h1 style="font-size:99%">SEND LAYOUT</h1>
+		</div>
+	</div>
+	<div data-role="content">
+	
+			<form action="http://gcccs.org/subicads/success1.php" method="post"  enctype="multipart/form-data">
+			<!-- Toggle Off -->
+			<hr class="gradient">
+			
+			<!-- Text field --> 
+			
+			<div data-role="fieldcontain">
+				<label for="name"><font color="black">Name:</font></label>
+				<input type="text" name="name" id="name"  required>
+			</div>
+			<hr class="gradient">
+			<div data-role="fieldcontain">
+				<label for="contact"><font color="black">Contact Number:</font></label>
+				<input type="text" name="contact" id="contact" required>
+			</div>
+			<hr class="gradient">
+			<div data-role="fieldcontain">
+				<label for="email"><font color="black">Email Address:</font></label>
+				<input type="text" name="email" id="email" required>
+			</div>
+
+			<hr class="gradient">
+
+			<div data-role="fieldcontain">
+				<label for="email"><font color="black">Layout Code:</font></label>
+				<input type="text" name="email" id="email" >
+			</div>
+
+			<hr class="gradient">
+			
+				<input type="hidden" name="code" id="code" required>
+			
+		
+
+			<!-- Drop Down -->
+			<div data-role="fieldcontain">
+				<label for="category" class="select"><font color="black">Category:</font></label>
+				<!--<select name="select-choice-1" id="select-choice-custom" data-native-menu="false">-->
+				<select name="category" id="category" data-theme="a">
+					<option value="Birthday">Birthday</option>
+					<option value="Certificate">Certificates</option>
+					<option value="Calendar">Calendar</option>
+					<option value="Business Card">Business</option>
+					<option value="Invitation">Invitation</option>
+					<option value="Menu">Menu</option>
+					<option value="Logo">Logo</option>
+					<option value="Banner">Banner</option>
+				</select>
+			</div>
+
+			<hr class="gradient">
+			<div data-role="fieldcontain">
+				<label for="content"><font color="black">Content:</font></label>
+				<textarea name="content" id="content" placeholder="Enter Content Here" required></textarea>
+			</div>
+
+			<hr class="gradient">
+
+			<div data-role="fieldcontain">
+			<!-- Radio -->
+<label for="image"><font color="black">Image:</font></label>
+			<input name="image" id="image" type="file" name="image">
+				
+</div>
+			<input type="submit" onclick="testing()" name="submit" value="SEND"  data-theme="a">
+			<hr class="gradient">
+			<!-- Checkbox -->
+			
+		
+		
+		</form>
+<br><br><br><br><br>
+	</div>
+	
+		
+	</div>
+<div data-role="page" id="track" data-theme="e">
+		<div data-role="header">
+			<h1 style="font-size:99%">TRACK ORDER</h1>
+		</div>
+		<div data-role="content">
+			
+<hr class="gradient">
+<form>
+<div data-role="fieldcontain" data-theme="" >
+<label for="jonumber" data-theme="c"><font color="black">JO Number:</font></label>
+<input type="text" data-theme="a" name="jonumber" id="jonumber" placeholder="."/>
+</div>
+<hr class="gradient">
+<div data-role="fieldcontain">
+<label for="status" data-theme="c"><font color="black">Status:</font></label>
+<input type="text" data-theme="a" name="status" id="status" placeholder="Status will be shown here.." class="ui-disabled">
+</div>
+<hr class="gradient">
+<div data-role="fieldcontain">
+<label for="status" data-theme="c"><font color="black">Designer:</font></label>
+<input type="text" data-theme="a" name="designer" id="designer" placeholder="Status will be shown here.." class="ui-disabled">
+</div>
+<hr class="gradient">
+<div data-role="fieldcontain">
+<label for="status" data-theme="c"><font color="black">Layout Category:</font></label>
+<input type="text" data-theme="a" name="type" id="type" placeholder="Status will be shown here.." class="ui-disabled">
+</div>
+<hr class="gradient">
+<div data-role="fieldcontain">
+<a href="#" id="track" onclick="ajax()" data-role="button" data-theme="b">SHOW STATUS</a>
+</div>
+</form>
+<hr class="gradient">
+		</div>
+		
+		
+	</div>
+<div data-role="page" id="contact" data-theme="a" >
+
+	<div data-role="header">
+		<div align="center">
+			<h1 style="font-size:99%">Contact Us</h1>
+		</div>
+	</div>
+	<div data-role="content" align="center" data-theme="a"><br>
+	<img src="img/3.png" width="80%" height="40%">
+	<br><br><br>
+	<ul data-role="listview" data-divider-theme="c">
+	
+	<li><a href="tel:+63472239142">Talk n Text</a></li>
+	<li><a href="tel:+639228286514">Sun Cellular</a></li>
+	<li><a href="tel:+639202005225">Smart</a></li>
+	<li><a href="mailto:subicadsled@hotmail.com">Hotmail</a></li>
+	<li><a href="mailto:subicads@yahoo.com">Yahoo Mail</a></li>
+	</ul>
+	
+	</div>
+	
+</div>
+<div data-role="page" id="about" data-theme="a">
+	<div data-role="content" align="center" data-theme="a">
+	<img src="img/aboutp.png" style="width:100%; height:100%;">
+	
+	
+	
+	</div>
+</div>
+<div data-role="page" id="gallery" data-theme="f">
+	<div data-role="header" data-theme="a">
+		<div align="center">
+		<h1 style="font-size:99%">GALLERY</h1>
+		</div>
+	</div>
+		<div data-role="content">
+            <div data-role="gridview">
+			
+			<div data-role="row" style="width:100%;height:200;" >
+					<div><a href="#bday"><img src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-ash3/1477394_722460624440337_655622236_n.jpg" style="width:100%;height:200;"><div data-role="details" align="center"><p><font color="black" size="4">BIRTHDAY</font><p></div></a></div>
+			</div>
+			<div data-role="row" style="width:100%;height:200;">
+					<div><a href="#christening"><img src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-ash4/p206x206/998647_722460181107048_1889798198_n.jpg" style="width:100%;height:200;"><div data-role="details"align="center"><p><font color="black" size="4">CHRISTENING</font><p></div></a></div>
+			</div>
+			<div data-role="row" style="width:100%;height:200;">
+					<div><a href="#banner"><img src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-frc3/t1/1508176_671667849542248_356313251_n.jpg" style="width:100%;height:200;"><div data-role="details"align="center"><p><font color="black" size="4">BANNERS</font><p></div></a></div>
+			</div>
+			
+			<div data-role="row" style="width:100%;height:200;">
+					<div><a href="#logo"><img src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-ash3/t1/1969123_671667836208916_482728606_n.jpg" style="width:100%;height:200;"><div data-role="details"align="center"><p><font color="black" size="4">LOGO</font><p></div></a></div>
+			</div>
+			<div data-role="row" style="width:100%;height:200;">
+					<div><a href="#business"><img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-prn2/t1/1901165_671667839542249_1759859419_n.jpg" style="width:100%;height:200;"><div data-role="details"align="center"><p><font color="black" size="4">BUSINESS CARDS</font><p></div></a></div>
+			</div>
+			<!--<div data-role="row">
+					<div><a href="#"><img src="img/5.jpg"><div data-role="details"><p><font size="7">PROMO</font><p></div></a></div>
+			</div>
+			<div data-role="row">
+					<div><a href="#"><img src="img/6.jpg"><div data-role="details"><p><font size="7">INVITATIONS</font><p></div></a></div>
+			</div>
+			-->
+		</div>
+ 
+	</div>
+</div>
+<div data-role="page" id="bday" data-theme="e">
+	<div data-role="header" data-theme="a">
+		<div align="center">
+		<h1 style="font-size:99%">BIRTHDAY</h1>
+		</div>
+	</div>
+<div data-role="content"data-theme="">
+		<div data-role="gridview">
+			
+			<div data-role="row">
+					<div><a href="#"><img src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-prn2/p206x206/1470055_722460784440321_282521454_n.jpg" style="width:100%;height:30%;"><div data-role="details" align="center"><p><font color="black" size="4">2013300</font><p></div></a></div>
+			</div>
+			<div data-role="row">
+					<div><a href="#"><img src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-ash3/1461066_722460821106984_307544742_n.jpg" style="width:100%;height:30%;"><div data-role="details" align="center"><p><font color="black" size="4">2013301</font><p></div></a></div>
+			</div>
+			<div data-role="row">
+					<div><a href="#"><img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-ash3/1475951_722460854440314_1188730546_n.jpg" style="width:100%;height:30%;"><div data-role="details" align="center"><p><font color="black"size="4">2013302</font><p></div></a></div>
+			</div>
+			
+			<div data-role="row">
+					<div><a href="#"><img src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-ash3/1426505_722460891106977_1891211026_n.jpg" style="width:100%;height:30%;"><div data-role="details" align="center"><p><font color="black" size="4">2013303</font><p></div></a></div>
+			</div>
+			<div data-role="row">
+					<div><a href="#"><img src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-ash3/1477394_722460624440337_655622236_n.jpg" style="width:100%;height:30%;"><div data-role="details" align="center"><p><font color="black" size="4">2013304</font><p></div></a></div>
+			</div>
+			<!--<div data-role="row">
+					<div><a href="#"><img src="img/5.jpg"><div data-role="details"><p><font size="7">PROMO</font><p></div></a></div>
+			</div>
+			<div data-role="row">
+					<div><a href="#"><img src="img/6.jpg"><div data-role="details"><p><font size="7">INVITATIONS</font><p></div></a></div>
+			</div>
+			-->
+		</div>
+	</div>
+</div>
+<div data-role="page" id="christening" data-theme="">
+	<div data-role="header" data-theme="a">
+		<div align="center">
+		<h1 style="font-size:99%">CHRISTENING</h1>
+		</div>
+	</div>
+	<div data-role="content">
+		<div data-role="gridview">
+			
+			<div data-role="row">
+					<div><a href=""><img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-prn2/1488327_722460194440380_1570788688_n.jpg" style="width:100%;height:30%;"><div data-role="details" align="center"><p><font color="black"size="4">2013305</font><p></div></a></div>
+			</div>
+			<div data-role="row">
+					<div><a href=""><img src="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-prn2/1460310_722460217773711_373242231_n.jpg" style="width:100%;height:30%;"><div data-role="details" align="center"><p><font color="black"size="4">2013306</font><p></div></a></div>
+			</div>
+			<div data-role="row">
+					<div><a href=""><img src="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-prn2/1459273_722460247773708_1296265211_n.jpg" style="width:100%;height:30%;"><div data-role="details" align="center"><p><font color="black"size="4">2013307</font><p></div></a></div>
+			</div>
+			
+			<div data-role="row">
+					<div><a href=""><img src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-ash3/1012796_722460274440372_1937135935_n.jpg" style="width:100%;height:30%;"><div data-role="details" align="center"><p><font color="black"size="4">2013308</font><p></div></a></div>
+			</div>
+			<div data-role="row">
+					<div><a href=""><img src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-prn1/994988_722460291107037_1417980742_n.jpg" style="width:100%;height:30%;"><div data-role="details" align="center"><p><font color="black"size="4">2013309</font><p></div></a></div>
+			</div>
+			<!--<div data-role="row">
+					<div><a href="#"><img src="img/5.jpg"><div data-role="details"><p><font size="7">PROMO</font><p></div></a></div>
+			</div>
+			<div data-role="row">
+					<div><a href="#"><img src="img/6.jpg"><div data-role="details"><p><font size="7">INVITATIONS</font><p></div></a></div>
+			</div>
+			-->
+		</div>
+	</div>
+	
+</div>
+<div data-role="page" id="banner" data-theme="">
+	<div data-role="header" data-theme="a">
+		<div align="center">
+		<h1 style="font-size:99%">BANNER</h1>
+		</div>
+	</div>
+	<div data-role="content">
+		<div data-role="gridview">
+			
+			<div data-role="row">
+					<div><a href=""><img src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-frc3/1472867_722458207773912_1154370585_n.jpg" style="width:100%;height:30%;"><div data-role="details" align="center"><p><font color="black"size="4">2013310</font><p></div></a></div>
+			</div>
+			<div data-role="row">
+					<div><a href=""><img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-frc1/999787_722458247773908_1968767435_n.jpg" style="width:100%;height:30%;"><div data-role="details" align="center"><p><font color="black"size="4">2013311</font><p></div></a></div>
+			</div>
+			<div data-role="row">
+					<div><a href=""><img src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-prn1/529438_722458261107240_1950855372_n.jpg" style="width:100%;height:30%;"><div data-role="details" align="center"><p><font color="black"size="4">2013312</font><p></div></a></div>
+			</div>
+			
+			<div data-role="row">
+					<div><a href=""><img src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-ash3/1451511_722458274440572_2017448134_n.jpg" style="width:100%;height:30%;"><div data-role="details" align="center"><p><font color="black"size="4">2013313</font><p></div></a></div>
+			</div>
+			<div data-role="row">
+					<div><a href=""><img src="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-frc1/995599_722458297773903_365643620_n.jpg" style="width:100%;height:30%;"><div data-role="details" align="center"><p><font color="black"size="4">2013314</font><p></div></a></div>
+			</div>
+			<!--<div data-role="row">
+					<div><a href="#"><img src="img/5.jpg"><div data-role="details"><p><font size="7">PROMO</font><p></div></a></div>
+			</div>
+			<div data-role="row">
+					<div><a href="#"><img src="img/6.jpg"><div data-role="details"><p><font size="7">INVITATIONS</font><p></div></a></div>
+			</div>
+			-->
+		</div>
+	</div>
+</div>
+<div data-role="page" id="logo" data-theme="">
+	<div data-role="header" data-theme="a">
+		<div align="center">
+		<h1 style="font-size:99%">LOGO</h1>
+		</div>
+	</div>
+	<div data-role="content">
+		<div data-role="gridview">
+			
+			<div data-role="row">
+					<div><a href=""><img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-ash3/p206x206/1488201_722461537773579_1701997956_n.jpg" style="width:100%;height:30%;"><div data-role="details" align="center"><p><font color="black"size="4">2013315</font><p></div></a></div>
+			</div>
+			<div data-role="row">
+					<div><a href=""><img src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-prn2/1463478_722461551106911_183264067_n.jpg" style="width:100%;height:30%;"><div data-role="details" align="center"><p><font color="black"size="4">2013316</font><p></div></a></div>
+			</div>
+			<div data-role="row">
+					<div><a href=""><img src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-frc3/1468664_722461574440242_75877225_n.jpg" style="width:100%;height:30%;"><div data-role="details" align="center"><p><font color="black" size="4">2013317</font><p></div></a></div>
+			</div>
+			
+			
+			
+			<!--<div data-role="row">
+					<div><a href="#"><img src="img/5.jpg"><div data-role="details"><p><font size="7">PROMO</font><p></div></a></div>
+			</div>
+			<div data-role="row">
+					<div><a href="#"><img src="img/6.jpg"><div data-role="details"><p><font size="7">INVITATIONS</font><p></div></a></div>
+			</div>
+			-->
+		</div>
+	</div>
+</div>
+<div data-role="page" id="business" data-theme="">
+	<div data-role="header" data-theme="a">
+		<div align="center">
+		<h1 style="font-size:99%">BUSINESS CARDS</h1>
+		</div>
+	</div>
+	<div data-role="content">
+		<div data-role="gridview">
+			
+			<div data-role="row">
+					<div><a href=""><img src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-prn2/1459725_722458607773872_1247986578_n.jpg" style="width:100%;height:30%;"><div data-role="details" align="center"><p><font color="black"size="4">2013320</font><p></div></a></div>
+			</div>
+			<div data-role="row">
+					<div><a href=""><img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-ash3/1441347_722458624440537_512483224_n.jpg" style="width:100%;height:30%;"><div data-role="details" align="center"><p><font color="black"size="4">2013321</font><p></div></a></div>
+			</div>
+			<div data-role="row">
+					<div><a href=""><img src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-ash4/1469912_722458637773869_26446351_n.jpg" style="width:100%;height:30%;"><div data-role="details"align="center"><p><font color="black"size="4">2013322</font><p></div></a></div>
+			</div>
+			
+			<div data-role="row">
+					<div><a href=""><img src="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-frc3/1455913_722458657773867_1176753520_n.jpg" style="width:100%;height:30%;"><div data-role="details"align="center"><p><font color="black"size="4">2013323</font><p></div></a></div>
+			</div>
+			<div data-role="row">
+					<div><a href=""><img src="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-frc3/1455913_722458657773867_1176753520_n.jpg" style="width:100%;height:30%;"><div data-role="details"align="center"><p><font color="black"size="4">2013324</font><p></div></a></div>
+			</div>
+			<!--<div data-role="row">
+					<div><a href="#"><img src="img/5.jpg"><div data-role="details"><p><font size="7">PROMO</font><p></div></a></div>
+			</div>
+			<div data-role="row">
+					<div><a href="#"><img src="img/6.jpg"><div data-role="details"><p><font size="7">INVITATIONS</font><p></div></a></div>
+			</div>
+			-->
+		</div>
+	</div>
+</div>
+<div data-role="page" id="agreement" data-theme="a">
+<div data-role="header">
+			<h1 style="font-size:99%">USER AGREEMENT</h1>
+		</div>
+	<div data-role="content" class="">
+				<div style="margin-left:20px;margin-right:20px;margin-top:20px;">
+
+	 <p align="center"><font size="5" face="Century Gothic" color="white">The Subicads Advertising Mobile and Tracking Solutions includes the following terms and conditions:</font></p>
+	
+
+	  
+	<p align="justify"><font size="4" face="Century Gothic" color="white">1. All information will be held confidential.</font></p>
+	<p align="justify"><font size="4" face="Century Gothic" color="white">2. No payments will be accepted through online method. All payments will be accepted at SubicAds Advertising counter. </font></p>
+	
+	<p align="justify"><font size="4" face="Century Gothic" color="white">3. Once you agreed on the terms and conditions, your request will be recorded on the pending list. If you do not settle it within 24 hours, your request will be automatically deleted.</font></p>
+		<br>
+	 <br>
+	 <br>
+	 <br>
+	
+	
+	</div>
+		</div>
+</div>
+</body>
+
+
+
+</html>
